@@ -22,7 +22,15 @@ npm install himawari-urls
 ## Usage
 
 ```js
-var himawariUrls = require('himawari-urls')
+var himawariURLs = require('himawari-urls')
+
+himawariURLs({
+  date: 'latest',
+  zoom: 2
+}, function (err, tiles) {
+  if (err) console.error(err)
+  tiles.map(function (t) { console.log(t.url) })
+})
 ```
 
 ## Contributing
