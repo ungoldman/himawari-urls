@@ -26,11 +26,17 @@ var himawariURLs = require('himawari-urls')
 
 himawariURLs({
   date: 'latest',
-  zoom: 2
+  infrared: true,
+  zoom: 1
 }, function (err, tiles) {
   if (err) console.error(err)
-  tiles.map(function (t) { console.log(t.url) })
+  tiles.map(function (t) { console.log(t) })
 })
+
+// { name: '0_0.png',
+//  url: 'http://himawari8-dl.nict.go.jp/himawari8/img/INFRARED_FULL/1d/550/2016/02/10/192000_0_0.png',
+//  x: 0,
+//  y: 0 }
 ```
 
 ## Contributing
