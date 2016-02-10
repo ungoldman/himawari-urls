@@ -11,7 +11,7 @@
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
 [standard-url]: http://npm.im/standard
 
-Get URLs for Himawari 8 images tiles based on a given date.
+Get URLs for Himawari 8 image tiles based on a given date.
 
 ## Install
 
