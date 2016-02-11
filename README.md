@@ -43,6 +43,10 @@ himawariURLs({
 
 Contributions welcome! Please read the [contributing guidelines](CONTRIBUTING.md) first.
 
+## Acknowledgment
+
+All source code in `index.js` has been adapted from [jakiestfu](github.com/jakiestfu)'s work in [himawari.js](github.com/jakiestfu/himawari.js).
+
 ## License
 
 [ISC](LICENSE)
