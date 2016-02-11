@@ -49,4 +49,4 @@ All source code in `index.js` has been adapted from [jakiestfu](github.com/jakie
 
 ## License
 
-[ISC](LICENSE)
+Original and modified work is released under the [MIT](LICENSE.md) license.
