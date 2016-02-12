@@ -45,7 +45,7 @@ Contributions welcome! Please read the [contributing guidelines](CONTRIBUTING.md
 
 ## Acknowledgment
 
-All source code in `index.js` has been adapted from [jakiestfu](github.com/jakiestfu)'s work in [himawari.js](github.com/jakiestfu/himawari.js).
+All source code in `index.js` has been adapted from [jakiestfu](https://github.com/jakiestfu)'s work in [himawari.js](https://github.com/jakiestfu/himawari.js).
 
 ## License
 
