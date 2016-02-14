@@ -25,9 +25,10 @@ npm install himawari-urls
 var himawariURLs = require('himawari-urls')
 
 himawariURLs({
-  date: 'latest',
-  infrared: true,
-  zoom: 1
+  date: 'latest',   // default: 'latest' (must be Date object, timestamp, or 'latest')
+  infrared: true,   // default: false
+  zoom: 1,          // default: 2
+  timeout: 20000    // default: 10000 (milliseconds)
 }, function (err, tiles) {
   if (err) console.error(err)
   tiles.map(function (t) { console.log(t) })

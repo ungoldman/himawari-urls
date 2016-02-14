@@ -30,7 +30,11 @@ function himawariURLs (options, callback) {
   options = options || {}
   var baseURL = getBaseURL(options.infrared)
 
-  resolveDate(baseURL, options.date, function (err, now) {
+  resolveDate({
+    base_url: baseURL,
+    date: options.date,
+    timeout: options.timeout
+  }, function (err, now) {
     if (err) return callback(err)
 
     // Normalize our date
@@ -92,13 +96,14 @@ function normalizeDate (date) {
 /**
  * Takes an input, either a date object, a date timestamp, or the string 'latest'
  * and resolves to a native Date object. Requires base URL to resolve date based
- * on latest date retrieved from Himawari 8 server.
+ * on latest date retrieved from Himawari 8 server. Optionally override default
+ * 10 second timeout.
  *
- * @param  {base_url}     input     tiles base URL
- * @param  {String|Date}  input     The incoming date or the string 'latest'
+ * @param  {Object}       options   date (Date|String), uri (String), timeout (Number)
  * @param  {Function}     callback  The function to be called when date is resolved
  */
-function resolveDate (base_url, input, callback) {
+function resolveDate (options, callback) {
+  var input = options.date
   var date = input
 
   // If provided a date string
@@ -111,7 +116,11 @@ function resolveDate (base_url, input, callback) {
 
   // If provided 'latest'
   if (input === 'latest') {
-    return request(base_url + '/latest.json', function (err, res) {
+    return request({
+      method: 'GET',
+      uri: options.base_url + '/latest.json',
+      timeout: options.timeout || 10000
+    }, function (err, res) {
       if (err) return callback(err)
 
       try {
