@@ -1,5 +1,6 @@
 var moment = require('moment')
 var request = require('request')
+var extend = require('deep-extend')
 
 var BASE_URL = 'http://himawari8-dl.nict.go.jp/himawari8/img/'
 var INFRARED = 'INFRARED_FULL'
@@ -23,11 +24,27 @@ module.exports = himawariURLs
  * - infrared: boolean (optional)
  * - zoom: number (default: 1)
  *
- * @param  {Object}       options   date: Date|String, infrared: Boolean
+ * @param  {Object}       opts      date: Date|String, infrared: Boolean
  * @param  {Function}     callback  The function to be called when URLs are ready
  */
-function himawariURLs (options, callback) {
-  options = options || {}
+function himawariURLs (opts, callback) {
+  // allow for options to be omitted and callback to be first argument
+  if (!callback && typeof opts === 'function') {
+    callback = opts
+    opts = {}
+  } else {
+    opts = opts || {}
+  }
+
+  if (!callback) callback = function () {}
+
+  var options = extend({
+    date: 'latest',
+    infrared: false,
+    timeout: 5000,
+    zoom: 1
+  }, opts)
+
   var baseURL = getBaseURL(options.infrared)
 
   resolveDate({
