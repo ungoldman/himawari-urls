@@ -1,5 +1,7 @@
 # himawari-urls
 
+Get URLs for Himawari 8 image tiles based on a given date.
+
 [![npm][npm-image]][npm-url]
 [![travis][travis-image]][travis-url]
 [![standard][standard-image]][standard-url]
@@ -10,8 +12,6 @@
 [travis-url]: https://travis-ci.org/ungoldman/himawari-urls
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
 [standard-url]: http://npm.im/standard
-
-Get URLs for Himawari 8 image tiles based on a given date.
 
 ## Install
 
