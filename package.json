@@ -2,9 +2,9 @@
   "name": "himawari-urls",
   "description": "Get URLs for Himawari 8 image tiles based on a given date.",
   "version": "1.0.0-alpha.2",
-  "author": "Nate Goldman <nate@ngoldman.me>",
+  "author": "Nate Goldman <ungoldman@gmail.com>",
   "bugs": {
-    "url": "https://github.com/ngoldman/himawari-urls/issues"
+    "url": "https://github.com/ungoldman/himawari-urls/issues"
   },
   "dependencies": {
     "deep-extend": "^0.4.1",
@@ -16,7 +16,7 @@
     "tap-spec": "^4.0.2",
     "tape": "^4.0.0"
   },
-  "homepage": "https://github.com/ngoldman/himawari-urls",
+  "homepage": "https://github.com/ungoldman/himawari-urls",
   "keywords": [
     "himawari",
     "satellite",
@@ -27,7 +27,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ngoldman/himawari-urls.git"
+    "url": "git+https://github.com/ungoldman/himawari-urls.git"
   },
   "scripts": {
     "test": "standard && tape test/*.js | tap-spec"
