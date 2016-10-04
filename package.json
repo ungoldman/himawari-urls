@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "deep-extend": "^0.4.1",
-    "moment": "^2.11.2",
+    "moment": "^2.15.1",
     "request": "^2.69.0"
   },
   "devDependencies": {
