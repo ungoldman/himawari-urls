@@ -6,8 +6,8 @@
 
 [npm-image]: https://img.shields.io/npm/v/himawari-urls.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/himawari-urls
-[travis-image]: https://img.shields.io/travis/ngoldman/himawari-urls.svg?style=flat-square
-[travis-url]: https://travis-ci.org/ngoldman/himawari-urls
+[travis-image]: https://img.shields.io/travis/ungoldman/himawari-urls.svg?style=flat-square
+[travis-url]: https://travis-ci.org/ungoldman/himawari-urls
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
 [standard-url]: http://npm.im/standard
 
