@@ -3,9 +3,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## unreleased
+## 1.0.0
 * better internal defaults management
 * allow function to be called without options
+* update repo URL
+* update dependencies
 
 ## 1.0.0-alpha.2
 * add timeout option

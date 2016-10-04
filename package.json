@@ -1,7 +1,7 @@
 {
   "name": "himawari-urls",
   "description": "Get URLs for Himawari 8 image tiles based on a given date.",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0",
   "author": "Nate Goldman <ungoldman@gmail.com>",
   "bugs": {
     "url": "https://github.com/ungoldman/himawari-urls/issues"
