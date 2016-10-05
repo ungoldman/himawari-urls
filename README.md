@@ -52,7 +52,6 @@ All source code in `index.js` has been adapted from [jakiestfu](https://github.c
 
 - [hi8](https://github.com/ungoldman/hi8): See Earth from Himawari-8 on your desktop every 10 minutes.
 - [himawari-bg](https://github.com/ungoldman/himawari-bg): Set the latest image from Himawari 8 as your desktop background.
-- [himawari-urls](https://github.com/ungoldman/himawari-urls): Get URLs for Himawari 8 image tiles based on a given date.
 - [himawari-history](https://github.com/ungoldman/himawari-history): Download all Himawari 8 images in a date range.
 
 ## License
