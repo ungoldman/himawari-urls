@@ -7,13 +7,13 @@
     "url": "https://github.com/ungoldman/himawari-urls/issues"
   },
   "dependencies": {
-    "deep-extend": "^0.4.1",
+    "deep-extend": "^0.6.0",
     "moment": "^2.15.1",
     "request": "^2.75.0"
   },
   "devDependencies": {
-    "standard": "^8.3.0",
-    "tap-spec": "^4.1.1",
+    "standard": "^12.0.1",
+    "tap-spec": "^5.0.0",
     "tape": "^4.6.2"
   },
   "homepage": "https://github.com/ungoldman/himawari-urls",
