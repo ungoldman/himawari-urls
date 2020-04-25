@@ -2,7 +2,7 @@ var moment = require('moment')
 var request = require('request')
 var extend = require('deep-extend')
 
-var BASE_URL = 'http://himawari8-dl.nict.go.jp/himawari8/img/'
+var BASE_URL = 'https://himawari8-dl.nict.go.jp/himawari8/img/'
 var INFRARED = 'INFRARED_FULL'
 var VISIBLE_LIGHT = 'D531106'
 var WIDTH = 550
