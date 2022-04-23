@@ -15,6 +15,9 @@
     "tap-arc": "^0.3.4",
     "tape": "^4.6.2"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "homepage": "https://github.com/ungoldman/himawari-urls",
   "keywords": [
     "himawari",
