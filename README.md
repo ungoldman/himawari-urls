@@ -3,9 +3,11 @@
 Get URLs for Himawari 8 image tiles based on a given date.
 
 [![npm][npm-image]][npm-url]
+[![downloads][downloads-image]][npm-url]
 
-[npm-image]: https://img.shields.io/npm/v/himawari-urls.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/himawari-urls.svg
 [npm-url]: https://www.npmjs.com/package/himawari-urls
+[downloads-image]: https://img.shields.io/npm/dm/himawari-urls.svg
 
 ## Install
 
