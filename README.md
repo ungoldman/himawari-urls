@@ -16,7 +16,7 @@ npm install himawari-urls
 ## Usage
 
 ```js
-var himawariURLs = require('himawari-urls')
+const himawariURLs = require('himawari-urls')
 
 himawariURLs({
   date: 'latest',   // default: 'latest' (must be Date object, timestamp, or 'latest')
@@ -44,7 +44,7 @@ All source code in `index.js` has been adapted from [jakiestfu](https://github.c
 
 ## See Also
 
-- [hi8](https://github.com/ungoldman/hi8): See Earth from Himawari-8 on your desktop every 10 minutes.
+- [@ungoldman/himawari](https://github.com/ungoldman/himawari): Maintained fork of `jakiestfu/himawari.js`.
 - [himawari-bg](https://github.com/ungoldman/himawari-bg): Set the latest image from Himawari 8 as your desktop background.
 - [himawari-history](https://github.com/ungoldman/himawari-history): Download all Himawari 8 images in a date range.
 
