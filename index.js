@@ -1,6 +1,5 @@
 var moment = require('moment')
 var request = require('request')
-var extend = require('deep-extend')
 
 var BASE_URL = 'https://himawari8-dl.nict.go.jp/himawari8/img/'
 var INFRARED = 'INFRARED_FULL'
@@ -13,8 +12,12 @@ var LEVEL = [
   '16d',
   '20d'
 ]
-
-module.exports = himawariURLs
+var DEFAULT_OPTS = {
+  date: 'latest',
+  infrared: false,
+  timeout: 5000,
+  zoom: 1
+}
 
 /**
  * Returns an array of objects containing URLs and metadata
@@ -38,12 +41,7 @@ function himawariURLs (opts, callback) {
 
   if (!callback) callback = function () {}
 
-  var options = extend({
-    date: 'latest',
-    infrared: false,
-    timeout: 5000,
-    zoom: 1
-  }, opts)
+  var options = Object.assign(DEFAULT_OPTS, opts)
 
   var baseURL = getBaseURL(options.infrared)
 
@@ -153,3 +151,5 @@ function resolveDate (options, callback) {
   // Invalid string provided, return new Date
   return callback(new Date())
 }
+
+module.exports = himawariURLs
