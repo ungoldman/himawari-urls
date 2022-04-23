@@ -1,7 +1,7 @@
-var test = require('tape')
-var moment = require('moment')
-var lastWeek = new Date(moment().subtract(7, 'days').format())
-var himawariURLs = require('../')
+const test = require('tape')
+const moment = require('moment')
+const lastWeek = new Date(moment().subtract(7, 'days').format())
+const himawariURLs = require('../')
 
 test('Fetch latest URLs', function (t) {
   himawariURLs({

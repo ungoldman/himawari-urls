@@ -1,18 +1,18 @@
-var moment = require('moment')
-var request = require('request')
+const moment = require('moment')
+const request = require('request')
 
-var BASE_URL = 'https://himawari8-dl.nict.go.jp/himawari8/img/'
-var INFRARED = 'INFRARED_FULL'
-var VISIBLE_LIGHT = 'D531106'
-var WIDTH = 550
-var LEVEL = [
+const BASE_URL = 'https://himawari8-dl.nict.go.jp/himawari8/img/'
+const INFRARED = 'INFRARED_FULL'
+const VISIBLE_LIGHT = 'D531106'
+const WIDTH = 550
+const LEVEL = [
   '1d',
   '4d',
   '8d',
   '16d',
   '20d'
 ]
-var DEFAULT_OPTS = {
+const DEFAULT_OPTS = {
   date: 'latest',
   infrared: false,
   timeout: 5000,
@@ -41,9 +41,9 @@ function himawariURLs (opts, callback) {
 
   if (!callback) callback = function () {}
 
-  var options = Object.assign(DEFAULT_OPTS, opts)
+  const options = Object.assign(DEFAULT_OPTS, opts)
 
-  var baseURL = getBaseURL(options.infrared)
+  const baseURL = getBaseURL(options.infrared)
 
   resolveDate({
     base_url: baseURL,
@@ -56,27 +56,27 @@ function himawariURLs (opts, callback) {
     normalizeDate(now)
 
     // Define some image parameters
-    var level = options.zoom ? LEVEL[options.zoom - 1] : LEVEL[0]
-    var blocks = parseInt(level.replace(/[a-zA-Z]/g, ''), 10)
-    var time = moment(now).format('HHmmss')
-    var year = moment(now).format('YYYY')
-    var month = moment(now).format('MM')
-    var day = moment(now).format('DD')
+    const level = options.zoom ? LEVEL[options.zoom - 1] : LEVEL[0]
+    const blocks = parseInt(level.replace(/[a-zA-Z]/g, ''), 10)
+    const time = moment(now).format('HHmmss')
+    const year = moment(now).format('YYYY')
+    const month = moment(now).format('MM')
+    const day = moment(now).format('DD')
 
     // compose URL
-    var tilesURL = [baseURL, level, WIDTH, year, month, day, time].join('/')
-    var tiles = []
+    const tilesURL = [baseURL, level, WIDTH, year, month, day, time].join('/')
+    const tiles = []
 
-    for (var x = 0; x < blocks; x++) {
-      for (var y = 0; y < blocks; y++) {
-        var name = x + '_' + y + '.png'
-        var url = tilesURL + '_' + name
+    for (let x = 0; x < blocks; x++) {
+      for (let y = 0; y < blocks; y++) {
+        const name = x + '_' + y + '.png'
+        const url = tilesURL + '_' + name
 
         tiles.push({
-          name: name,
-          url: url,
-          x: x,
-          y: y
+          name,
+          url,
+          x,
+          y
         })
       }
     }
@@ -91,7 +91,7 @@ function himawariURLs (opts, callback) {
  * @returns {String}              full base URL
  */
 function getBaseURL (infrared) {
-  var url = BASE_URL
+  let url = BASE_URL
   if (infrared) url += INFRARED
   else url += VISIBLE_LIGHT
   return url
@@ -118,8 +118,8 @@ function normalizeDate (date) {
  * @param  {Function}     callback  The function to be called when date is resolved
  */
 function resolveDate (options, callback) {
-  var input = options.date
-  var date = input
+  const input = options.date
+  let date = input
 
   // If provided a date string
   if (typeof input === 'string' && input !== 'latest') {
